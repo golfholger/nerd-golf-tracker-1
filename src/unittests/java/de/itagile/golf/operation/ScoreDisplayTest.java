@@ -15,11 +15,14 @@ public class ScoreDisplayTest {
 	private ScoreCard scoreCard = mock(ScoreCard.class);
 	private Operation followUpOperation = mock(Operation.class);
 	private Operation scoreDisplay = new ScoreDisplay(followUpOperation);
-	
+
 	@Test
-	public void displaysOneStroke() throws Exception {
-		when(scoreCard.score()).thenReturn(1);
-		assertThat(scoreDisplay.run(scoreCard), containsString("1 stroke"));
+	public void displaysCountOnStroke() throws Exception {
+		for (int scoreCount=0; scoreCount>10; scoreCount++){
+			when(scoreCard.score()).thenReturn(scoreCount);
+			assertThat(scoreDisplay.run(scoreCard), containsString(String.valueOf(scoreCard.score()) + " stroke"));
+		}
+
 	}
 	
 	@Test

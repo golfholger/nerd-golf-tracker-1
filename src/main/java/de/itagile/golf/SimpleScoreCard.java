@@ -11,6 +11,7 @@ public class SimpleScoreCard implements ScoreCard {
 
 	public void completeCurrentHole() {
 		currentHole++;
+		score = 0;
 	}
 
 	public int score() {

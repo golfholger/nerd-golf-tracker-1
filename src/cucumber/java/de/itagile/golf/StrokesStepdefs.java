@@ -27,6 +27,7 @@ public class StrokesStepdefs {
     public void playedOnaHoleAndGoToNext() {
         tracker.enter("strike ball");
         tracker.enter("next hole");
+        tracker.assertThatAnswer(containsString("score has been reset"));
     }
 	
 	@Then("the NerdGolfTracker also counts so many strokes")

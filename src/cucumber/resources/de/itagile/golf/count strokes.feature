@@ -9,7 +9,7 @@ Feature: count strokes per hole
             |x|
             |1|
             |2|
-    @wip
+
     Scenario: go to next hole
         When I played on a hole
         Then the score for the next hole is reset to 0

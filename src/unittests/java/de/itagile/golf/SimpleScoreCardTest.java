@@ -27,6 +27,7 @@ public class SimpleScoreCardTest {
 	public void resetsScore() throws Exception {
 		scoreCard.increaseScore();
 		scoreCard.completeCurrentHole();
+		assertThat(scoreCard.score(), is(0));
 	}
 	
 	@Test

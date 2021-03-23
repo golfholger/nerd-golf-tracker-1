@@ -24,7 +24,9 @@ public class Help implements Operation {
 		for (Command command : collector.collect()) {
 			helpTexts.add(helpLineFor(command));
 		}
-		return "I respond to: " + CollectionUtils.join(helpTexts, SystemProperties.LINE_SEPARATOR);
+		return "I respond to: "
+			+ SystemProperties.LINE_SEPARATOR
+			+ CollectionUtils.join(helpTexts, SystemProperties.LINE_SEPARATOR);
 	}
 
 	private String helpLineFor(Command command) {

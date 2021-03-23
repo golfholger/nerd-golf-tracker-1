@@ -7,12 +7,12 @@ import de.itagile.golf.operation.NextHoleDisplay;
 
 public class NextHoleCommand implements Command {
 
-	public NextHole operation() {
-		return new NextHole(new NextHoleDisplay(new HoleDisplay()));
-	}
-
 	public String command() {
 		return "next hole";
+	}
+
+	public NextHole operation() {
+		return new NextHole(new NextHoleDisplay(new HoleDisplay()));
 	}
 
 	public String description() {

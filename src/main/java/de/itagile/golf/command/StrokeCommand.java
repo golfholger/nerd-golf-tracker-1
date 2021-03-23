@@ -7,12 +7,12 @@ import de.itagile.golf.operation.ScoreDisplay;
 
 public class StrokeCommand implements Command {
 
-	public Stroke operation() {
-		return new Stroke(new ScoreDisplay(new HoleDisplay()));
-	}
-
 	public String command() {
 		return "strike ball";
+	}
+
+	public Stroke operation() {
+		return new Stroke(new ScoreDisplay(new HoleDisplay()));
 	}
 
 	public String description() {
